@@ -388,7 +388,7 @@ class Tasks {
 	 * @param {Number} points The sprint points estimate
 	 * @param {Object} [options] The parameter options to pass in
 	 */
-	 async updatePoints(taskId, points) {
+	 async updatePoints(taskId, points, options) {
 		return this._request.put({
 			endpoint: `${this.route}/${taskId}/pointsEstimate`,
 			params: options,
