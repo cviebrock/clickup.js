@@ -380,6 +380,21 @@ class Tasks {
 			params: options,
 		});
 	}
+
+	/**
+	 * Update the sprint points for a task
+	 *
+	 * @param {String} taskId The task id
+	 * @param {Number} points The sprint points estimate
+	 * @param {Object} [options] The parameter options to pass in
+	 */
+	 async updatePoints(taskId, points) {
+		return this._request.put({
+			endpoint: `${this.route}/${taskId}/pointsEstimate`,
+			params: options,
+			data: {points},
+		});
+	}
 }
 
 module.exports = Tasks;
